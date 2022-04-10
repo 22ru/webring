@@ -37,4 +37,8 @@ function createLinks(siteName) {
     } else {
         next.href = siteList[current + 1][1];
     }
+    fullList = document.getElementById("webringList");
+    if (fullList) {
+        fullList.href = "https://22ru.github.io/webring/index.html";
+    }
 }
