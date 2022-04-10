@@ -1,5 +1,3 @@
-
-
 var siteList = [
     ["hat", "https://hat.neocities.org/"],
     ["pompon", "https://pompon.neocities.org/"],
@@ -13,6 +11,8 @@ function displayList () {
         a.innerText = siteList[i][0];
         a.href = siteList[i][1];
         document.getElementById("siteListDisplay").appendChild(a);
+        var br = document.createElement("br");
+        document.getElementById("siteListDisplay").appendChild(br);
     }
 }
 
@@ -25,12 +25,13 @@ function getCurrent(siteName) {
 
 function createLinks(siteName) {
     var current = getCurrent(siteName);
-    prev = document.getElementById("previous");
+    prev = document.getElementById("webringPrev");
     if (current == 0) {
         prev.href = siteList[siteList.length - 1][1];
     } else {
         prev.href = siteList[current - 1][1];
     }
+    next = document.getElementById("webringNext");
     if (current == siteList.length - 1) {
         next.href = siteList[0][1];
     } else {
