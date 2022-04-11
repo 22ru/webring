@@ -1,8 +1,6 @@
 var siteList = [
     ["hat", "https://hat.neocities.org/"],
-    ["pompon", "https://pompon.neocities.org/"],
-    ["youtube", "https://www.youtube.com/"],
-    ["volksusa", "https://volksusastore.com/webstores/dollfie/index.php"]
+    ["pompon", "https://pompon.neocities.org/"]
 ];
 
 function displayList () {
