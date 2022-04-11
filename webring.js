@@ -25,20 +25,24 @@ function getCurrent(siteName) {
 
 function createLinks(siteName) {
     var current = getCurrent(siteName);
-    prev = document.getElementById("webringPrev");
+    prev = document.getElementById("webringPrev"); // Required
     if (current == 0) {
         prev.href = siteList[siteList.length - 1][1];
     } else {
         prev.href = siteList[current - 1][1];
     }
-    next = document.getElementById("webringNext");
+    next = document.getElementById("webringNext"); // Required
     if (current == siteList.length - 1) {
         next.href = siteList[0][1];
     } else {
         next.href = siteList[current + 1][1];
     }
-    fullList = document.getElementById("webringList");
+    fullList = document.getElementById("webringList"); // Optional
     if (fullList) {
         fullList.href = "https://22ru.github.io/webring/index.html";
+    }
+    rand = document.getElementById("webringRand"); // Optional
+    if (rand) {
+        rand.href = siteList[Math.floor(Math.random()*siteList.length)][1];
     }
 }
