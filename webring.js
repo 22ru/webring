@@ -1,7 +1,8 @@
 var siteList = [
     ["hat's nekocomiccon", "https://hat.neocities.org/"],
     ["pompon", "https://pompon.neocities.org/"],
-    ["tiger carnival", "https://bisuko.neocities.org/"]
+    ["tiger carnival", "https://bisuko.neocities.org/"],
+    ["zucchini", "http://zucchini.cc/"]
 ];
 
 function displayList () {
