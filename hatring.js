@@ -14,6 +14,9 @@ class webringMember {
 function buildWebringWidget(iconNum) {
     container = document.getElementById(widgetContainerID);
     currIndex = getCurrIndex();
+    if (currIndex  == -1) {
+        container.innerText = "This site isn't in the " + webringName + "!";
+    }
     if (iconNum < 0 || iconNum > webringIcon.length - 1) iconNum = 0;
 
     var prev = document.createElement("a");
