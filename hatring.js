@@ -64,36 +64,3 @@ function getCurrIndex() {
 
     return -1;
 }
-
-
-// old functions for compatibility
-function getCurrent(siteName) {
-    for (var i = 0; i < siteList.length; i++) {
-        if (siteName == siteList[i].name)
-            return i;
-    }
-}
-
-function createLinks(siteName) {
-    var current = getCurrent(siteName);
-    prev = document.getElementById("webringPrev"); // Required
-    if (current == 0) {
-        prev.href = siteList[siteList.length - 1].link;
-    } else {
-        prev.href = siteList[current - 1].link;
-    }
-    next = document.getElementById("webringNext"); // Required
-    if (current == siteList.length - 1) {
-        next.href = siteList[0].link;
-    } else {
-        next.href = siteList[current + 1].link;
-    }
-    fullList = document.getElementById("webringList"); // Optional
-    if (fullList) {
-        fullList.href = indexLink;
-    }
-    rand = document.getElementById("webringRand"); // Optional
-    if (rand) {
-        rand.href = siteList[Math.floor(Math.random()*siteList.length)].link;
-    }
-}
