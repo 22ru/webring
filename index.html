@@ -3,20 +3,25 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>Super Dollfie WebHandHold</title>
-    <link rel="icon" type="image/gif" href="hh_100x100.jpg">
-    <script src="webring.js"></script> 
+    <link rel="icon" type="image/gif" href="img/hh_100x100.jpg">
+    <link rel="stylesheet" href="style.css">
+    <script src="hatring.js"></script>
+    <script src="hatring-index.js"></script>
+    <script src="hatring-config.js"></script>
 </head>
 
-<body onload="displayList();">
+<body onload="displayMembers();">
 
-    <p>Thanks for checking out the Super Dollfie WebHandHold!</p>
+    <p>Thanks for visiting the Super Dollfie WebHandHold!</p>
 
     <h3>Members</h3>
-    <p id="siteListDisplay"></p>
+    <div id="memberDisplay"></div>
 
     <h3>Icons</h3>
-    <img src="hh_100x100.jpg" />
-    <img src="hh_88x31.jpg" />
+    <ol start="0">
+        <li><img src="img/hh_100x100.jpg" /></li>
+        <li><img src="img/hh_88x31.jpg" /></li>
+    </ol>
 
     <h3>Webring Rules</h3>
     <ol>
@@ -28,11 +33,18 @@
     <h3>How to Join</h3>
     <p>Contact hat to be added to the list.</p>
 
-    <p>Link the script <code>https://22ru.github.io/webring/webring.js</code></p>
+    <h3>Old Widget instructions</h3>
+    <p>Link the script <code>https://22ru.github.io/webring/hatring.js</code></p>
 
     <p>Call <code>createLinks('[yourusername]')</code> somewhere in your code, such as an onload function in the body tag. Don't forget to replace "yourusername" with your username...</p>
 
     <p>Add elements with the IDs "webringNext" and "webringPrev" somewhere on your page. "webringRand" and "webringPrev" are optional.</p>
 
     <p>Here's a <a href="template.html">template</a>. Steal it if you wish. Heck, you can steal this entire webring code if you want! Make your own but don't cry to me when it breaks.</p>
+
+    <h3>Using the hatring.js script for other webrings</h3>
+    <p></p>
+
+
+    <div id="SDHandHold"></div>
 </body>
