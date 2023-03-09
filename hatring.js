@@ -29,6 +29,7 @@ function buildWebringWidget(iconNum) {
         prev.href = siteList[currIndex - 1].link;
     }
     prev.href = 0;
+    prev.innerText = prevStr;
     container.appendChild(prev);
 
     var icon = document.createElement("a");
@@ -45,12 +46,14 @@ function buildWebringWidget(iconNum) {
     next.setAttribute("target", "_blank");
     next.setAttribute("rel", "noopener noreferrer");
     next.href = siteList[(currIndex + 1) % siteList.length].link;
+    next.innerText = nextStr;
     container.appendChild(next);
 
     var rand = document.createElement("a");
     rand.setAttribute("target", "_blank");
     rand.setAttribute("rel", "noopener noreferrer");
     rand.href = siteList[Math.floor(Math.random()*siteList.length)].link;
+    rand.innerText = randStr;
     container.appendChild(rand);
 }
 
