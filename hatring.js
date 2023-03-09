@@ -16,6 +16,7 @@ function buildWebringWidget(iconNum) {
     currIndex = getCurrIndex();
     if (currIndex  == -1) {
         container.innerText = "This site isn't in the " + webringName + "!";
+        return;
     }
     if (iconNum < 0 || iconNum > webringIcon.length - 1) iconNum = 0;
 
