@@ -26,3 +26,4 @@ var nextStr = "⏭︎";
 var indexStr = "⏹︎";
 var randStr = "⏯︎";
 var separator = "🌸";
+var randTitle = "May Mother SD bless you!!";

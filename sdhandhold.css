@@ -1,0 +1,23 @@
+#SDHandHold {
+    margin: 0px;
+    color: white;
+}
+
+.SDHandHoldIcon {
+    margin: 0px; 
+    display: block; 
+    float: left;
+}
+.SDHandHoldIcon img {
+    width: 40px; 
+    margin: 0px;
+}
+
+.SDHandHoldName {
+    margin: 0px;
+}
+
+.SDHandHoldControls {
+    display: flex;
+    justify-content: space-around;
+}

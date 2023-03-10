@@ -25,6 +25,7 @@ function buildWebringWidget(iconNum) {
     if (iconNum < 0 || iconNum > webringIcon.length - 1) iconNum = 0;
 
     var icon = document.createElement("a");
+    icon.class = widgetContainerID + "Icon";
     icon.setAttribute("target", "_blank");
     icon.setAttribute("rel", "noopener noreferrer");
     icon.href = indexLink;
@@ -33,6 +34,11 @@ function buildWebringWidget(iconNum) {
     iconImg.title = webringName;
     icon.appendChild(iconImg);
     container.appendChild(icon);
+
+    var ringName = document.createElement("div");
+    ringName.innerText = webringName;
+    ringName.className = webringName + "Name";
+    container.appendChild(ringName);
 
     var controls = document.createElement("div");
     controls.className = widgetContainerID + "Controls";
@@ -49,6 +55,7 @@ function buildWebringWidget(iconNum) {
     }
     prev.innerText = prevStr;
     controls.appendChild(prev);
+    controls.append(separator);
 
     var next = document.createElement("a");
     next.setAttribute("target", "_blank");
@@ -57,11 +64,13 @@ function buildWebringWidget(iconNum) {
     next.title = siteList[(currIndex + 1) % siteList.length].name;
     next.innerText = nextStr;
     controls.appendChild(next);
+    controls.append(separator);
 
     var rand = document.createElement("a");
     rand.setAttribute("target", "_blank");
     rand.setAttribute("rel", "noopener noreferrer");
     rand.href = siteList[Math.floor(Math.random()*siteList.length)].link;
+    rand.title = randTitle;
     rand.innerText = randStr;
     controls.appendChild(rand);
 
