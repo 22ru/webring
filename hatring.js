@@ -28,7 +28,6 @@ function buildWebringWidget(iconNum) {
     } else {
         prev.href = siteList[currIndex - 1].link;
     }
-    prev.href = 0;
     prev.innerText = prevStr;
     container.appendChild(prev);
 

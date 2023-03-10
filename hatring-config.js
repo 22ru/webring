@@ -17,8 +17,8 @@ var siteList = [
 // These should be direct links and will be hotlinked by each member unless
 // you can convince them otherwise
 var webringIcon = [
-    "https://22ru.github.io/webring/img/hh_88x31.jpg",
-    "https://22ru.github.io/webring/img/hh_100x100.jpg"
+    "https://22ru.github.io/webring/img/hh_100x100.jpg",
+    "https://22ru.github.io/webring/img/hh_88x31.jpg"
 ];
 
 var prevStr = "⏮︎";
