@@ -8,10 +8,10 @@ var webringName = "Super Dollfie WebHandHold";
 var widgetContainerID = "SDHandHold";
 
 var siteList = [
-    new webringMember("hat's nekocomiccon", "img/membericon/hat.gif", "hat", "https://22ru.github.io/nekocomiccon/", "all day i dream about dolls", "cool"),
+    new webringMember("hat's nekocomiccon", "img/membericon/hat.gif", "hat", "https://22ru.github.io/nekocomiccon/", "#1 Hina (Lieselotte) Fansite", "cool"),
     new webringMember("pompon", "img/membericon/pompon.gif", "hors", "https://pompon.neocities.org/", "kikipop + honeybear", "kawaii"),
-    new webringMember("tiger carnival", "img/membericon/tigercarnival.png", "grim", "https://bisuko.neocities.org/", "Home of a fashionable SD13 Cecile named Dakota", "nice"),
-    new webringMember("zucchini", "img/membericon/zucchini.gif", "hors", "http://zucchini.cc/", "Home of Haupia, Marmeladov, and Sascha", "kawaii"),
+    new webringMember("tiger carnival", "img/membericon/tigercarnival.png", "grim", "https://bisuko.neocities.org/softplastic/dollroom", "Home of a fashionable boy named Dakota (Cecile)", "nice"),
+    new webringMember("zucchini", "img/membericon/zucchini.gif", "hors", "http://zucchini.cc/", "Home of Haupia (F59), Marmeladov (Max), and Sascha (", "kawaii"),
 ];
 
 // These should be direct links and will be hotlinked by each member unless

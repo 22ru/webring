@@ -11,6 +11,10 @@ class webringMember {
     }
 }
 
+function buildWebringWidget() {
+    buildWebringWidget(0);
+}
+
 function buildWebringWidget(iconNum) {
     container = document.getElementById(widgetContainerID);
     currIndex = getCurrIndex();
@@ -19,17 +23,6 @@ function buildWebringWidget(iconNum) {
         return;
     }
     if (iconNum < 0 || iconNum > webringIcon.length - 1) iconNum = 0;
-
-    var prev = document.createElement("a");
-    prev.setAttribute("target", "_blank");
-    prev.setAttribute("rel", "noopener noreferrer");
-    if (currIndex == 0) { // surely there is a more beautiful way to do this
-        prev.href = siteList[siteList.length - 1].link;
-    } else {
-        prev.href = siteList[currIndex - 1].link;
-    }
-    prev.innerText = prevStr;
-    container.appendChild(prev);
 
     var icon = document.createElement("a");
     icon.setAttribute("target", "_blank");
@@ -40,20 +33,39 @@ function buildWebringWidget(iconNum) {
     iconImg.title = webringName;
     icon.appendChild(iconImg);
     container.appendChild(icon);
-    
+
+    var controls = document.createElement("div");
+    controls.className = widgetContainerID + "Controls";
+
+    var prev = document.createElement("a");
+    prev.setAttribute("target", "_blank");
+    prev.setAttribute("rel", "noopener noreferrer");
+    if (currIndex == 0) { // surely there is a more beautiful way to do this
+        prev.href = siteList[siteList.length - 1].link;
+        prev.title = siteList[siteList.length - 1].name;
+    } else {
+        prev.href = siteList[currIndex - 1].link;
+        prev.title = siteList[currIndex - 1].name;
+    }
+    prev.innerText = prevStr;
+    controls.appendChild(prev);
+
     var next = document.createElement("a");
     next.setAttribute("target", "_blank");
     next.setAttribute("rel", "noopener noreferrer");
     next.href = siteList[(currIndex + 1) % siteList.length].link;
+    next.title = siteList[(currIndex + 1) % siteList.length].name;
     next.innerText = nextStr;
-    container.appendChild(next);
+    controls.appendChild(next);
 
     var rand = document.createElement("a");
     rand.setAttribute("target", "_blank");
     rand.setAttribute("rel", "noopener noreferrer");
     rand.href = siteList[Math.floor(Math.random()*siteList.length)].link;
     rand.innerText = randStr;
-    container.appendChild(rand);
+    controls.appendChild(rand);
+
+    container.appendChild(controls);
 }
 
 function getCurrIndex() {
