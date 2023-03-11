@@ -6,16 +6,19 @@
     <link rel="icon" type="image/gif" href="img/hh_100x100.jpg">
     <link rel="stylesheet" href="style.css">
     <script src="hatring.js"></script>
-    <script src="hatring-index.js"></script>
     <script src="hatring-config.js"></script>
+    <script src="nosering-config.js"></script>
+
 </head>
 
-<body onload="displayMembers();">
+<body onload="ring.buildWebringWidget();ring2.buildWebringWidget();">
 
     <p>Thanks for visiting the Super Dollfie WebHandHold!</p>
 
     <h3>Members</h3>
-    <div id="memberDisplay"></div>
+    <div id="memberDisplay">
+        <script>ring.displayMembers();</script>
+    </div>
 
     <h3>Icons</h3>
     <ol start="0">
@@ -45,6 +48,4 @@
     <h3>Using the hatring.js script for other webrings</h3>
     <p></p>
 
-
-    <div id="SDHandHold"></div>
 </body>

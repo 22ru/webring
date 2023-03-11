@@ -1,15 +1,20 @@
 #SDHandHold {
     margin: 0px;
     color: white;
+    background-color: black;
+    display: block;
+    width: 300px;
+    height: 100px;
 }
 
 .SDHandHoldIcon {
     margin: 0px; 
-    display: block; 
+    position: relative;
     float: left;
+    
 }
 .SDHandHoldIcon img {
-    width: 40px; 
+    width: 20px; 
     margin: 0px;
 }
 

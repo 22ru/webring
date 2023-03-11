@@ -1,29 +1,45 @@
+// This file needs to be linked on each site using the webring
+// after hatring.js
+
+// *********** Config for webring moderator *********** 
 // Modifiable variables for each webring
-// Needs to be linked on each site using the webring
+// ALL are required
+var ring = new webring(
+    // indexLink = 
+    "https://22ru.github.io/webring/index.html",
 
-var indexLink = "https://22ru.github.io/webring/index.html";
+    // webringName = 
+    "Super Dollfie WebHandHold",
 
-var webringName = "Super Dollfie WebHandHold";
+    // webringID = 
+    "SDHandHold",
 
-var widgetContainerID = "SDHandHold";
+// These icons will likely not be shown on any member's site
+// It should be okay to use a relative link
+    // siteList = 
+    [
+        new webringMember("hat's nekocomiccon", "img/membericon/hat.gif", "https://hat.neocities.org/cafe"),
+        new webringMember("pompon", "img/membericon/pompon.gif", "https://pompon.neocities.org/"),
+        new webringMember("tiger carnival", "img/membericon/tigercarnival.png", "https://bisuko.neocities.org/softplastic/dollroom"),
+        new webringMember("zucchini", "img/membericon/zucchini.gif", "http://zucchini.cc/")
+    ],
 
-var siteList = [
-    new webringMember("hat's nekocomiccon", "img/membericon/hat.gif", "hat", "https://22ru.github.io/nekocomiccon/", "#1 Hina (Lieselotte) Fansite", "cool"),
-    new webringMember("pompon", "img/membericon/pompon.gif", "hors", "https://pompon.neocities.org/", "kikipop + honeybear", "kawaii"),
-    new webringMember("tiger carnival", "img/membericon/tigercarnival.png", "grim", "https://bisuko.neocities.org/softplastic/dollroom", "Home of a fashionable boy named Dakota (Cecile)", "nice"),
-    new webringMember("zucchini", "img/membericon/zucchini.gif", "hors", "http://zucchini.cc/", "Home of Haupia (F59), Marmeladov (Max), and Sascha (", "kawaii"),
-];
+// *********** Customizable per member section *********** 
 
-// These should be direct links and will be hotlinked by each member unless
-// you can convince them otherwise
-var webringIcon = [
-    "https://22ru.github.io/webring/img/hh_100x100.jpg",
-    "https://22ru.github.io/webring/img/hh_88x31.jpg"
-];
+// webringIcon should be directly linked in the code given to the members
+// Call loadCustomizations() before buildWebringWidget() if any of these are modified from defaults
+    // webringIcon = 
+    "https://22ru.github.io/webring/img/hh_100x100.jpg"
+);
 
-var prevStr = "⏮︎";
-var nextStr = "⏭︎";
-var indexStr = "⏹︎";
-var randStr = "⏯︎";
-var separator = "🌸";
-var randTitle = "May Mother SD bless you!!";
+// You should be able to comment out or delete these lines without issue.
+ring.loadCustomizations(
+    // prevStr
+    "⏮︎", 
+    // nextStr
+    "⏭︎", 
+    // randStr
+    "⏯︎", 
+    // separator
+    "🌸"
+    );

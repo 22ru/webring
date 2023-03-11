@@ -1,30 +1,13 @@
 #memberDisplay {
     display: flex;
-    flex-direction: column;
-}
-
-.memberContainer {
-    display: flex;
+    border: solid;
+    border-width: 1px;
     flex-direction: row;
-    justify-content:space-evenly;
-    border-style: solid;
-    width: 50%;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.siteName {
-    display: flex;
-    flex-direction: column;
-
-}
-.siteName img {
-    max-width: 81px;
-}
-
-.siteName, .siteWebmaster {
-    border-right: solid;
-    width: 120px;
-}
-
-.siteRating {
-    display: none;
+#memberDisplay a {
+    width: 88px;
+    height: 31px;
 }
