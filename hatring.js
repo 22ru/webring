@@ -79,7 +79,7 @@ class webring {
         }
         var currIndex = this.getCurrIndex();
         if (currIndex  == -1) {
-            container.innerText = "This site isn't in the " + webringName + "!";
+            container.innerText = "This site isn't in the " + this.webringName + "!";
             return;
         }
     
