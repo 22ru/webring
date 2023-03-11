@@ -59,7 +59,7 @@ class webring {
 
         if (!hostName) return -1;
     
-        for (i = 0; i < siteList.length; i++) {
+        for (i = 0; i < this.siteList.length; i++) {
             if (this.siteList[i].link.includes(hostName)) {
                 return i;
             }
