@@ -1,7 +1,8 @@
 #memberDisplay {
     display: flex;
-    border: solid;
-    border-width: 1px;
+    border: 1px solid;
+    width: fit-content;
+    max-width: 500px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -10,4 +11,11 @@
 #memberDisplay a {
     width: 88px;
     height: 31px;
+}
+
+code {
+    border: 1px solid;
+    display: block;
+    width: 500px;
+    font-family: monospace;
 }

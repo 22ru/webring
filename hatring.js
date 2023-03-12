@@ -1,5 +1,11 @@
+// hatring object file
+// by fran hat
+// Written March 9, 2023
+// Last modified March 11, 2023
+
 // Needs to be linked on each site using the webring
-// Config must be linked after this file
+// This file MUST be linked before the config file is linked
+// For more info, see https://22ru.github.io/webring/index.html
 
 class webringMember {
     constructor(name, icon, link) {
@@ -9,6 +15,7 @@ class webringMember {
     }
 }
 
+// I chose to encapsulate this in an object because I wanted multiple webrings using this file to be able to be shown on one page.
 class webring {
     constructor(indexLink, webringName, webringID, siteList, webringIcon) {
         this.indexLink = indexLink;
@@ -23,11 +30,15 @@ class webring {
         this.separator = " ";
     }
 
-    loadCustomizations(prevStr, nextStr, randStr, separator) {
+    loadNavCustomizations(prevStr, nextStr, randStr, separator) {
         this.prevStr = prevStr;
         this.nextStr = nextStr;
         this.randStr = randStr;
         this.separator = separator;
+    }
+
+    loadCustomIcon(iconLink) {
+        this.webringIcon = iconLink;
     }
 
     // Build a display of member icons on the webring info page
@@ -54,7 +65,7 @@ class webring {
         var i, hostName;
         hostName = window.location.hostname;
 
-        //for testing purposes only
+        // for testing purposes only
         if (hostName == "localhost") return 0;
 
         if (!hostName) return -1;
@@ -67,7 +78,9 @@ class webring {
         return -1;
     }
 
-    buildWebringWidget() {
+    // Creates a widget in a div with the ID webringID,
+    // or creates that div and appends it to the end of the body
+    buildWidget() {
         var container = document.getElementById(this.webringID);
         if (container == null) {
             container = document.createElement("div");
@@ -104,13 +117,13 @@ class webring {
         container.appendChild(ringName);
     
         var controls = document.createElement("div");
-        controls.className = this.webringID + "Controls";
+        controls.className = this.webringID + "Nav";
         
         controls.appendChild(this.createPrevLink(currIndex));
         controls.append(this.separator);
-        controls.appendChild(this.createNextLink(currIndex));
-        controls.append(this.separator);
         controls.appendChild(this.createRandLink());
+        controls.append(this.separator);
+        controls.appendChild(this.createNextLink(currIndex));
     
         container.appendChild(controls);
     }
@@ -151,7 +164,7 @@ class webring {
         return rand;
     }
 
-    // Add correct links to previously added webring div
+    // Add navigation links to previously created webring div
     createLinks() {
         var target, index;
         var currIndex = this.getCurrIndex();

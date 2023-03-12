@@ -1,0 +1,25 @@
+#SDHandHold {
+    border: 1px solid;
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#SDHandHold a {
+    display: flex;
+    justify-content: center;
+}
+
+#SDHandHold img {
+    display: flex;
+    width: 40px;
+}
+
+.SDHandHoldName {
+    white-space: nowrap;
+}
+
+.SDHandHoldNav {
+    display: flex;
+    justify-content: space-between;
+}
