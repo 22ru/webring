@@ -1,7 +1,7 @@
 // hatring object file
 // by fran hat
 // Written March 9, 2023
-// Last modified March 11, 2023
+// Last modified April 9, 2023
 
 // Needs to be linked on each site using the webring
 // This file MUST be linked before the config file is linked
@@ -169,7 +169,7 @@ class webring {
         var target, index;
         var currIndex = this.getCurrIndex();
         if (currIndex  == -1) {
-            container.innerText = "This site isn't in the " + webringName + "!";
+            console.log("Hatring Error! No links created. This site isn't in the " + webringName + "!");
             return;
         }
         target = document.getElementById(this.webringID + "Next");
