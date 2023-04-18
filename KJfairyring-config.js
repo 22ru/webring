@@ -7,18 +7,18 @@
 // For more info, see https://22ru.github.io/webring/index.html
 
 // *********** Config for webring moderator *********** 
-var KJWebring = new webring(
+var KJfairyring = new webring(
     // indexLink
     // A link the the info page about the webring
     "https://22ru.github.io/webring/index.html",
 
     // webringName
     // The full name of the webring
-    "Kinoko Juice Webring",
+    "Kinoko Juice Fairyring",
 
     // webringID
     // Shorter version of the webring name. Do not include special characters like spaces. This will also be used as the container ID in which the widget is inserted
-    "KJWebring",
+    "KJfairyring",
 
     // siteList
     // These icons will likely not be shown on any member's site
