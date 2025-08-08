@@ -25,7 +25,7 @@ var SDHandHold = new webring(
     // It should be okay to use a relative link
     // The order is: site name, site icon, site link
     [
-        new webringMember("hat's nekocomiccon", "img/membericon/hat.gif", "https://hat.neocities.org/cafe"),
+        new webringMember("top hat cafe", "img/membericon/hat.gif", "https://22ru.github.io/tophatcafe/"),
         new webringMember("pompon", "img/membericon/pompon.gif", "https://pompon.neocities.org/"),
         new webringMember("tiger carnival", "img/membericon/tigercarnival.png", "https://bisuko.neocities.org/softplastic/dollroom"),
         new webringMember("zucchini", "img/membericon/zucchini.gif", "https://zucchini.cc/")

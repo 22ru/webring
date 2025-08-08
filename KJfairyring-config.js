@@ -27,7 +27,7 @@ var KJfairyring = new webring(
     [
         new webringMember("sylum", "img/membericon/sylum.png", "https://sylum.web.fc2.com/"),
         new webringMember("pompon", "img/membericon/pompon.gif", "https://pompon.neocities.org/"),
-        new webringMember("hat's nekocomiccon", "img/membericon/hat.gif", "https://hat.neocities.org/cafe"),
+        new webringMember("top hat cafe", "img/membericon/hat.gif", "https://22ru.github.io/tophatcafe/"),
         new webringMember("zucchini", "img/membericon/zucchini.gif", "https://zucchini.cc/")
     ],
 
